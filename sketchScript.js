@@ -42,10 +42,7 @@ function makeRows(rows, cols) {
     for (c = 0; c < (rows * cols); c++) {
         let cols = document.createElement("div");
         // cols.innerText = (c + 1);
-
         divGrid.appendChild(cols).className = "grid-cols hoverGrid";
-
-
         const hovers = document.querySelectorAll(".hoverGrid");
         hovers.forEach((hover) => {
 
@@ -87,7 +84,6 @@ function clearBtn() {
     btnClear.id = "btn";
     btnClear.textContent = "Clear";
     divCon.appendChild(btnClear);
-
     btnClear.addEventListener('click', () => {
         clearB = document.querySelectorAll('.grid-cols').forEach((e) => {
             e.remove();
@@ -107,7 +103,6 @@ function createGrid() {
             alert("Enter number not less than 64");
         } else {
             makeRows(value, value);
-
         }
 
     });
